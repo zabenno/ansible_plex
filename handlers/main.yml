@@ -1,0 +1,15 @@
+---
+- name: restart plex
+  docker_container:
+          name: plex
+          image: plexinc/pms-docker
+          state: started
+          restart: yes
+          network_mode: "host"
+          volumes:
+                  - "{{ plex_db_path }}:/config"
+                  - "{{ plex_transcode_path }}:/transcode"
+                  - "{{ plex_media_path }}:/data"
+          env:
+                  TZ: "{{ plex_timezone }}"
+                  PLEX_CLAIM: "{{ plex_claim_token }}"

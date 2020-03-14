@@ -1,0 +1,7 @@
+---
+- name: download plex container
+  docker_image:
+          name: plexinc/pms-docker
+          source: pull
+  notify:
+          - restart plex

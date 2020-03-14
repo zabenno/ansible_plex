@@ -1,0 +1,6 @@
+---
+plex_db_path: "/var/plex/db"
+plex_transcode_path: "/var/plex/transcode"
+plex_media_path: "/var/plex/media"
+plex_timezone: "NZ"
+plex_claim_token: "XXXX"
